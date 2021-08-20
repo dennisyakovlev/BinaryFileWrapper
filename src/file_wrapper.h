@@ -306,6 +306,6 @@ struct _block_size<T, 1> {
 template<typename T, typename = _all_base<Writable, T>>
 std::streamsize block_size_total(T* tupe) {
 
-    return _block_size<T, std::tuple_size_v<T>>::func(tupe);
+    return _block_size<T, std::tuple_size_v<T>>::size(tupe);
 
 }
