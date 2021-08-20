@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include <tuple>
 
+// native writable output operator
 template<typename T>
 std::ostream& operator<< (std::ostream& out, const NativeWritable<T>& writable) {
 
@@ -13,6 +14,7 @@ std::ostream& operator<< (std::ostream& out, const NativeWritable<T>& writable) 
 
 }
 
+// native writable 
 template<typename T>
 std::ostream& operator<< (std::ostream& out, const ContainerWritable<T>& writable) {
 
@@ -37,6 +39,7 @@ struct _print_tuple {
 
 };
 
+// base case
 template<typename Tuple>
 struct _print_tuple<Tuple, 1> {
 
